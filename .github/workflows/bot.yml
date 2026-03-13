@@ -16,6 +16,11 @@ jobs:
           python-version: "3.11"
 
       - name: Install dependencies
+        run: |
+          pip uninstall discord.py -y
+          pip install discord.py-self python-dotenv
+
+      - name: Install dependencies
         run: pip install discord.py==1.7.3 python-dotenv
 
       - name: Create .env
