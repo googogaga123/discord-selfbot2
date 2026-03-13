@@ -97,4 +97,4 @@ async def on_ready():
 
 # token
 
-bot.run(bot1,bot = False)  
+bot.run(bot1)  
