@@ -52,7 +52,7 @@ msgs ={
 
 
 
-bot = commands.Bot(command_prefix="!", intents=discord.Intents.all(),selfbot = True)
+bot = commands.Bot(command_prefix="!")
 
 async def send_msg(d):
     await asyncio.sleep(5)
@@ -70,25 +70,24 @@ async def send_msg(d):
 @bot.event
 async def on_ready():
     print(f"[{place}] {bot.user.name} is online")
-    channel = bot.get_channel(channel_ids["test"])
-    if channel :
-        from datetime import datetime
-        now = datetime.now().strftime("%H:%M:%S")
-        await channel.send(f"[{place}]  Bot is online at {now}")
-    else:
-        print(f"[{place}] Channel A (status) not found.")
-    await asyncio.sleep(10)
+    try:
+        ds = ["bg", "sign", "plat", "consumable", "guild", "door", "winterfest", "ubiweek", "valentine", "block"]
+        for d in ds:
+            await send_msg(d)
+        print(f"[{place}] All done.")
+    finally:
+        await bot.close()  # always closes, even if error occurs\
 
-    send_loop.start()
+    # send_loop.start()
     # send_loop1.start()
 
 
-@tasks.loop(hours=2)
-async def send_loop():
+# @tasks.loop(hours=2)
+# async def send_loop():
 
-    ds = ["bg", "sign", "plat", "consumable", "guild", "door", "winterfest", "ubiweek", "valentine"]
-    for d in ds:
-        await send_msg(d)
+#     ds = ["bg", "sign", "plat", "consumable", "guild", "door", "winterfest", "ubiweek", "valentine"]
+#     for d in ds:
+#         await send_msg(d)
 
 # @tasks.loop(seconds=0, hours=6)
 # async def send_loop1():
@@ -98,4 +97,4 @@ async def send_loop():
 
 # token
 
-bot.run(bot3,bot = False)  
+bot.run(bot3)  
