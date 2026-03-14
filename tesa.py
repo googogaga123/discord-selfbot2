@@ -63,10 +63,12 @@ async def send_msg(d):
             print(f"[{place}] Sent[{d}]")
         else:
             print(f"[{place}] Channel not found: {d}")
-    except discord.HTTPException:
+    except discord.HTTPException as e:
         print(f"[{place}] Cooldown on {d}, waiting 20s...")
-        await asyncio.sleep(20)
-
+        if e.status == 429:
+            print(f"[{place}] Rate limited on {d}, skipping...")
+        else:
+            print(f"[{place}] HTTP error on {d}: {e}")
 @bot.event
 async def on_ready():
     print(f"[{place}] {bot.user.name} is online")
