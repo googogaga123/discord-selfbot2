@@ -24,4 +24,4 @@ jobs:
         run: echo "bot1=${{ secrets.BOT1 }}" > .env
 
       - name: Run bot
-        run: python tesa1.py '{"place":"KMWQ","channel_idbg":782718523629633567,"channel_idsign":846661246303469598,"channel_idplat":846673193426354176,"channel_idconsumable":847201895873118218,"channel_idblock":1104057271215984741,"channel_idguild":762435449909542942,"channel_iddoor":846671811223355402,"channel_test":,"channel_cooktools":737429783201447937,"channel_winterfest":784189920742342688,"channel_ubiweek":997609617410490418,"channel_carni":712744557519044719,"channel_valentine":806455698014732318}'
+        run: python tesa1.py '{"place":"KMWQ","channel_idbg":782718523629633567,"channel_idsign":846661246303469598,"channel_idplat":846673193426354176,"channel_idconsumable":847201895873118218,"channel_idblock":1104057271215984741,"channel_idguild":762435449909542942,"channel_iddoor":846671811223355402,"channel_cooktools":737429783201447937,"channel_winterfest":784189920742342688,"channel_ubiweek":997609617410490418,"channel_carni":712744557519044719,"channel_valentine":806455698014732318}'
