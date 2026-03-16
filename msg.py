@@ -1,5 +1,6 @@
 msg_block = '''CHEAP BLOCK AT {place}
-acorn Art Deco Bountiful Jungle Temple Pillar Chinese Temple Pillar Clouds Cloudstone Block Crystalized Star Fragment Block Cutaway Building Dreamstone Block Fallen Pillar Glowy Block Granite Block Granite Block - Blue Granite Block - Green Granite Block - Red Hedge heartcastle column Immortals Fenyx Rising - Eternal Spring Mountain Immortals Fenyx Rising - Eternal Spring Topiary Jungle Pillar long tree log lovewillow's lace Lovewillow Magic Cobblestone Column pinecone Pillar Radiation Block sequoia tree tall tree log Weeping Willow Foliage Weeping Willow Streamers winter foliage winter hedge winterfest tree winterfest wonderland foliage Xenoid Block
+acorn Art Deco Bountiful Jungle Temple Pillar Chinese Temple Pillar Clouds Cloudstone Block Crystalized Star Fragment Block Cutaway Building Dreamstone Block Fallen Pillar Glowy Block Granite Block Granite Block - Blue Granite Block - Green Granite Block - Red Hedge heartcastle column Immortals Fenyx Rising - Eternal Spring Mountain Immortals Fenyx Rising - Eternal Spring Topiary Jungle Pillar long tree log lovewillow's lace Lovewillow Magic Cobblestone Column pinecone Pillar Radiation Block sequoia tree tall tree log Weeping Willow Foliage Weeping Willow Streamers winter foliage winter hedge winterfest tree winterfest wonderland foliage Xenoid Block Castle Stone Digital dirt matrix dirt Snow block Techno grass
+
 BLOCK AT {place}
 '''
 
@@ -8,7 +9,7 @@ AQUA WALLPAPER Art Wall BLACK WALLPAPER BLUE WALLPAPER Blue Royal Wallpaper BROW
 WALLPAPER AT {place}'''
 
 msg_sign = '''CHEAP SIGN AT {place} 
-Arrow Placard Crappy Sign Danger Sign Exclamation Sign For Sale Sign Gem Sign Pointy Sign Radiation Sign Sign Street Sign Ruined Sign Tavern Sign Western Banner Sign Welcome To Growtopia Sign Valensign Carnival Sign Open Sign Holographic Sign
+Arrow Placard Crappy Sign Danger Sign Exclamation Sign For Sale Sign Gem Sign Pointy Sign Radiation Sign Sign Street Sign Ruined Sign Tavern Sign Western Banner Sign Welcome To Growtopia Sign Valensign Carnival Sign Open Sign Holographic Sign Shop Sign Buddy's Sign Greetings Earthlings Sign Space Station Sign Subway Sign Winterfest Sign Hospital Sign Gingerbread Sign World lock Neon Sign Scoreboard g-Virus Info Sign Gates Motel SIgn Tombstone pizza sign pineapple sign
     >>>MAIL<<<<
 Blue Mailbox Mailbox Message In a Bottle Retinal Scan Data Bulletin Board Guestbook    
 SIGN AT {place}
@@ -39,7 +40,7 @@ CHEAP DOOR & PORTAL AT {place}
 msg_cooktools= '''Cheap Cooktools AT {place}'''
 
 msg_winterfest="""Winterfest Item AT {place}
-Log cabin, Log cabin Door, long tree log, snowball, snowyrock, Tall tree log, winter foliage, winter hedge, Winterfest Wonderland Foliage
+Log cabin, Log cabin Door, long tree log, snowball, snowyrock, Tall tree log, winter foliage, winter hedge, Winterfest Wonderland Foliage Long yule log
 Winterfest Item AT {place}"""
 
 msg_ubiweek= """Ubiweek Item AT {place}
