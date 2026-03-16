@@ -1,5 +1,5 @@
 import discord
-from discord.ext import commands, tasks
+from discord.ext import commands
 import asyncio
 import sys
 import json
@@ -7,9 +7,12 @@ import msg
 from dotenv import load_dotenv
 import os
 import time
+import requests  
 
 load_dotenv()
 bot1 = os.getenv('bot1')
+GH_TOKEN = os.getenv('GH_TOKEN')         
+GH_REPO  = os.getenv('GH_REPO')           
 
 if len(sys.argv) < 2:
     print("Error: JSON config tidak diberikan.")
@@ -20,18 +23,18 @@ config = json.loads(raw_config)
 
 place = config["place"]
 channel_ids = {
-    "bg"          : config["channel_idbg"],
-    "sign"        : config["channel_idsign"],
-    "plat"        : config["channel_idplat"],
-    "consumable"  : config["channel_idconsumable"],
-    "block"       : config["channel_idblock"],
-    "guild"       : config["channel_idguild"],
-    "door"        : config["channel_iddoor"],
-    "winterfest"  : config["channel_winterfest"],
-    "ubiweek"     : config["channel_ubiweek"],
-    "carni"       : config["channel_carni"],
-    "valentine"   : config["channel_valentine"],
-    "test"        : config["channel_test"],
+    "bg"         : config["channel_idbg"],
+    "sign"       : config["channel_idsign"],
+    "plat"       : config["channel_idplat"],
+    "consumable" : config["channel_idconsumable"],
+    "block"      : config["channel_idblock"],
+    "guild"      : config["channel_idguild"],
+    "door"       : config["channel_iddoor"],
+    "winterfest" : config["channel_winterfest"],
+    "ubiweek"    : config["channel_ubiweek"],
+    "carni"      : config["channel_carni"],
+    "valentine"  : config["channel_valentine"],
+    "test"       : config["channel_test"],
 }
 
 msgs = {
@@ -49,19 +52,39 @@ msgs = {
     "test"       : msg.msg_test.replace("{place}", place),
 }
 
-BLOCK_COOLDOWN = 6 * 3600  # 6 jam dalam detik
-TIMESTAMP_FILE = f"block_last_sent_{place}.txt"
+BLOCK_COOLDOWN = 6 * 3600
+VAR_NAME = f"BLOCK_LAST_SENT_{place.upper()}"  # nama variable di GitHub, misal BLOCK_LAST_SENT_KMWQ
 
-def can_send_block():
-    if not os.path.exists(TIMESTAMP_FILE):
-        return True
-    with open(TIMESTAMP_FILE, "r") as f:
-        last = float(f.read().strip())
-    return (time.time() - last) >= BLOCK_COOLDOWN
+def get_block_timestamp():
+    """Ambil timestamp dari GitHub repo variable."""
+    if not GH_TOKEN or not GH_REPO:
+        return None
+    url = f"https://api.github.com/repos/{GH_REPO}/actions/variables/{VAR_NAME}"
+    headers = {"Authorization": f"Bearer {GH_TOKEN}", "Accept": "application/vnd.github+json"}
+    r = requests.get(url, headers=headers)
+    if r.status_code == 200:
+        return float(r.json()["value"])
+    return None  # belum ada = belum pernah kirim
 
 def save_block_timestamp():
-    with open(TIMESTAMP_FILE, "w") as f:
-        f.write(str(time.time()))
+    """Simpan timestamp ke GitHub repo variable."""
+    if not GH_TOKEN or not GH_REPO:
+        print(f"[{place}] GH_TOKEN/GH_REPO tidak ada, skip save timestamp.")
+        return
+    url_check = f"https://api.github.com/repos/{GH_REPO}/actions/variables/{VAR_NAME}"
+    headers = {"Authorization": f"Bearer {GH_TOKEN}", "Accept": "application/vnd.github+json"}
+    data = {"name": VAR_NAME, "value": str(time.time())}
+    # Coba update dulu, kalau 404 baru create
+    r = requests.patch(url_check, headers=headers, json=data)
+    if r.status_code == 404:
+        base_url = f"https://api.github.com/repos/{GH_REPO}/actions/variables"
+        requests.post(base_url, headers=headers, json=data)
+
+def can_send_block():
+    last = get_block_timestamp()
+    if last is None:
+        return True
+    return (time.time() - last) >= BLOCK_COOLDOWN
 
 bot = commands.Bot(command_prefix="!")
 
@@ -94,14 +117,12 @@ async def on_ready():
         for d in ds:
             await send_msg(d)
 
-        # Block dikirim hanya kalau sudah 6 jam sejak terakhir
         if can_send_block():
             await send_msg("block")
             save_block_timestamp()
             print(f"[{place}] Block sent and timestamp saved.")
         else:
-            with open(TIMESTAMP_FILE, "r") as f:
-                last = float(f.read().strip())
+            last = get_block_timestamp()
             sisa = BLOCK_COOLDOWN - (time.time() - last)
             print(f"[{place}] Block skipped. Cooldown sisa {sisa/3600:.1f} jam.")
 
