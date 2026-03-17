@@ -10,7 +10,7 @@ import time
 import requests  
 
 load_dotenv()
-bot3 = os.getenv('bot3')
+bot4 = os.getenv('bot4')
 GH_TOKEN = os.getenv('GH_TOKEN')         
 GH_REPO  = os.getenv('GH_REPO')           
 
@@ -130,4 +130,4 @@ async def on_ready():
     finally:
         await bot.close()
 
-bot.run(bot3)
+bot.run(bot4)
