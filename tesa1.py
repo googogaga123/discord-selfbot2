@@ -29,6 +29,7 @@ channel_ids = {
     "consumable" : config["channel_idconsumable"],
     "block"      : config["channel_idblock"],
     "guild"      : config["channel_idguild"],
+    "clash"      : config["channel_idclash"],
     "door"       : config["channel_iddoor"],
     "winterfest" : config["channel_winterfest"],
     "ubiweek"    : config["channel_ubiweek"],
@@ -44,6 +45,7 @@ msgs = {
     "consumable" : msg.msg_consumable.replace("{place}", place),
     "block"      : msg.msg_block.replace("{place}", place),
     "guild"      : msg.msg_guild.replace("{place}", place),
+    "clash"      : msg.msg_clash.replace("{place}", place),
     "door"       : msg.msg_door.replace("{place}", place),
     "winterfest" : msg.msg_winterfest.replace("{place}", place),
     "ubiweek"    : msg.msg_ubiweek.replace("{place}", place),
@@ -113,7 +115,7 @@ async def on_command_error(ctx, error):
 async def on_ready():
     print(f"[{place}] {bot.user.name} is online")
     try:
-        ds = ["bg", "sign", "plat", "consumable", "guild", "door", "winterfest", "ubiweek", "valentine"]
+        ds = ["bg", "sign", "plat", "consumable", "guild", "door", "winterfest", "ubiweek", "valentine", "clash"]
         for d in ds:
             await send_msg(d)
 

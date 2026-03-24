@@ -25,8 +25,8 @@ Antidote Das Red Balloon DELUXE GROW SPRAY FERTILIZER GROW Spray Fertilizerz Poc
 CONSUMABLE AT {place}
 '''
 
-msg_guild =  '''CHEAP GUILD ITEM AT {place}
-Sell Guild Potion: Black Mixer 95, Sell Guild Potion: White Mixer 1, Sell Guild Entrance - Normal 4, Sell Guild Entrance - Ornate 4, Sell Guild Banner - Normal (Horizontal) 8/1, Sell Guild Banner - Normal (Vertical) 8/1, Sell Guild Banner - Ornate (Horizontal) 3/1, Sell Guild Banner - Ornate (Vertical) 3/1, Sell All Guild Flag 10/1, Sell Guild Flag Pole - Spear 5/1, Sell Guild Flag Pole - Wings 5/1, Cracked stone slab, Winter foliage, Winter hedge, storm cloud, Galleon's Ratlines, castle door, sunset cloud, sunset cloud background, Manor House Sandstone Background, Manor House Sandstone
+msg_clash =  '''CHEAP CLASH ITEM AT {place}
+ Cracked stone slab, Winter foliage, Winter hedge, storm cloud, Galleon's Ratlines, castle door, sunset cloud, sunset cloud background, Manor House Sandstone Background, Manor House Sandstone
 GUILD ITEM AT {place}
 '''
 msg_door= '''CHEAP DOOR & PORTAL AT {place}
@@ -61,3 +61,6 @@ Valentine Item AT {place}
 
 
 msg_test = "test"
+msg_guild = """GUILD Item AT {place}
+Sell Guild Potion: Black Mixer 95, Sell Guild Potion: White Mixer 1, Sell Guild Entrance - Normal 4, Sell Guild Entrance - Ornate 4, Sell Guild Banner - Normal (Horizontal) 8/1, Sell Guild Banner - Normal (Vertical) 8/1, Sell Guild Banner - Ornate (Horizontal) 3/1, Sell Guild Banner - Ornate (Vertical) 3/1, Sell All Guild Flag 10/1, Sell Guild Flag Pole - Spear 5/1, Sell Guild Flag Pole - Wings 5/1,
+GUILD Item AT {place}"""
