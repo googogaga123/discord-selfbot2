@@ -50,7 +50,7 @@ bot2_config = {
     "channel_idplat": 846673193426354176,
     "channel_idconsumable": 847201895873118218,
     "channel_idblock" : 1104057271215984741,
-    "channel_idguild"   : 762435449909542942,
+    "channel_idguild"   : 900847998320406599,
     "channel_iddoor" :846671811223355402,
     "channel_test"  : 1384782210090926226,
     "channel_cooktools" :737429783201447937,
@@ -58,6 +58,7 @@ bot2_config = {
     "channel_ubiweek":997609617410490418,
     "channel_carni":712744557519044719,
     "channel_valentine":806455698014732318,
+    "channel_idclash":762435449909542942,
 
 }
 
