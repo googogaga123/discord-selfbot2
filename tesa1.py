@@ -9,7 +9,6 @@ import os
 import time
 import requests  
 
-load_dotenv()
 bot1 = os.getenv('bot1')
 GH_TOKEN = os.getenv('GH_TOKEN')         
 GH_REPO  = os.getenv('GH_REPO')           
