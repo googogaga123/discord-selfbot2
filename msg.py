@@ -9,15 +9,15 @@ AQUA WALLPAPER Art Wall BLACK WALLPAPER BLUE WALLPAPER Blue Royal Wallpaper BROW
 WALLPAPER AT {place}'''
 
 msg_sign = '''CHEAP SIGN AT {place} 
-Arrow Placard Crappy Sign Danger Sign Exclamation Sign For Sale Sign Gem Sign Pointy Sign Radiation Sign Sign Street Sign Ruined Sign Tavern Sign Western Banner Sign Welcome To Growtopia Sign Valensign Carnival Sign Open Sign Holographic Sign Shop Sign Buddy's Sign Greetings Earthlings Sign Space Station Sign Subway Sign Winterfest Sign Hospital Sign Gingerbread Sign World lock Neon Sign Scoreboard g-Virus Info Sign Gates Motel SIgn Tombstone pizza sign pineapple sign
-    >>>MAIL<<<<
-Blue Mailbox Mailbox Message In a Bottle Retinal Scan Data Bulletin Board Guestbook    
+**Signs & Placards:**
+Arrow Placard, Crappy Sign, Danger Sign, Exclamation Sign, For Sale Sign, Gem Sign, Pointy Sign, Radiation Sign, Sign, Street Sign, Ruined Sign, Tavern Sign, Western Banner Sign, Welcome To Growtopia Sign, Valensign, Carnival Sign, Open Sign, Holographic Sign, Shop Sign, Buddy's Sign, Greetings Earthlings Sign, Space Station Sign, Pineapple Sign, Neon Sign, Scoreboard, G-Virus Info Sign, Gates Motel Sign, Tombstone, Digital Sign
+**Mail:**
+Blue Mailbox, Mailbox, Message In a Bottle, Retinal Scan Data, Bulletin Board, Guestbook    
 SIGN AT {place}
 '''
 
 msg_plat = '''CHEAP PLATFORM AT {place}  
-Assassin's Creed: Renaissance Arch, Assassin's Creed: Renaissance Scaffolding, Bountiful Bamboo Ladder, Bountiful Bamboo Platform, Carnival Ladder, Cave Platform, Chinese arch, Climbing Vine, Corn field ladder, Cracked stone slab, Dark Wallnut Ladders, Diving board support, Fire Escape, Fish Landing Platform, Galleon's Ratlines, Ladder, love ladder, Perch, Pink marble Arch, Prince of Persia: Palace Arch, Rave stage, Rayman - Band land platform, Rayman - Dream forest lianas, Rayman - Dream forest platform, Regal Stairs, Rickety Ladders, Rock Platform, Sideways vines, Starship Deck Ladder, Starship Floor Grill, Staircase, Storm cloud, Sunflower ladder, Wooden Platform
-
+Assassin's Creed: Renaissance Arch, Assassin's Creed: Renaissance Scaffolding, Bone Platform, Bountiful Bamboo Ladder, Bountiful Bamboo Platform, Bountiful Climbing Hydrangea, Carnival Ladder, Cave Platform, Chinese Arch, Climbing Vine, Colonization Wagon Base, Colonization Wagon Canopy, Corn Field Ladder, Cracked Stone Slab, Dark Wallnut Ladders, Diving Board Support, Fire Escape, Fish Landing Platform, Galleon Mast - Cross Beam, Galleon's Ratlines, Garden Planter, Garden Trellis Tunnel, Grand Jade Platform, Hover Platform, Ladder, Love Ladder, Perch, Pink Marble Arch, Prince of Persia: Palace Arch, Rainbow Platform, Rayman - Band Land Platform, Rayman - Band Land Drum, Rayman - Dream Forest Lianas, Rayman - Dream Forest Platform, Rave Stage, Regal Stairs, Rickety Ladders, Rock Platform, Sideways Vines, Snow Rock Platform, Starship Deck Ladder, Starship Floor Grill, Staircase, Steel Girder, Storm Cloud, Sunflower Ladder, USS Protostar, Wooden Platform
 PLATFORM AT {place}    '''
 
 msg_consumable = '''CHEAP CONSUMABLE AT {place}
